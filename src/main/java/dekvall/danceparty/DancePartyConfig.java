@@ -9,10 +9,21 @@ import net.runelite.client.config.ConfigSection;
 public interface DancePartyConfig extends Config
 {
 	@ConfigItem(
+			keyName = "sadMode",
+			name = "Sad Mode",
+			description = "boo hoo hoo",
+			position = 0
+	)
+	default boolean sadMode()
+	{
+		return false;
+	}
+
+	@ConfigItem(
 			keyName = "workoutMode",
 			name = "Workout Mode",
 			description = "#1 OSRS fitness inspiration",
-			position = 0
+			position = 1
 	)
 	default boolean workoutMode()
 	{
@@ -23,7 +34,7 @@ public interface DancePartyConfig extends Config
 			keyName = "disableInPvp",
 			name = "Disable in PvP",
 			description = "Disable dance moves when entering dangerous situations :(",
-			position = 1
+			position = 2
 	)
 	default boolean disableInPvp()
 	{
@@ -34,7 +45,7 @@ public interface DancePartyConfig extends Config
 			name = "Only Dance When...",
 			description = "If any of these are enabled, people will only dance if you've accomplished that thing!",
 			closedByDefault = false,
-			position = 2
+			position = 3
 	)
 	String conditionalSection = "conditional";
 

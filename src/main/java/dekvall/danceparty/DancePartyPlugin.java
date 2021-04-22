@@ -169,6 +169,10 @@ public class DancePartyPlugin extends Plugin
 		{
 			setPlayerMoveFrom(WorkoutMove.values(), player);
 		}
+		else if (config.sadMode())
+		{
+			setPlayerMoveFrom(CryMove.values(), player);
+		}
 		else
 		{
 			setPlayerMoveFrom(DanceMove.values(), player);
